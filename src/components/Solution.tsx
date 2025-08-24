@@ -116,18 +116,18 @@ export const Solution = () => {
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
                   <div className="text-4xl mb-3">👥</div>
-                <Network className="h-10 w-10" />
+                  <p className="text-white font-bold text-lg">Fans</p>
                   <p className="text-purple-200 text-sm mt-2">Engage & Earn</p>
                 </div>
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
-                  Entertainment-First Blockchain
+                  <div className="text-4xl mb-3">🎨</div>
                   <p className="text-white font-bold text-lg">Creators</p>
                   <p className="text-purple-200 text-sm mt-2">Monetize & Connect</p>
-                  Built specifically for entertainment industry needs with ultra-low fees and high throughput
+                </div>
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
                   <div className="text-4xl mb-3">🎬</div>
                   <p className="text-white font-bold text-lg">Studios</p>
-                  <span className="text-green-300 font-semibold text-sm">Industry Optimized</span>
+                  <p className="text-purple-200 text-sm mt-2">Industry Optimized</p>
                 </div>
               </div>
             </div>
