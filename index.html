@@ -1,13 +1,498 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fankoin Blockchain Entertainment Platform Website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fankoin - The Future of Entertainment Blockchain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-icon">
+                    <div class="lightning-bolt"></div>
+                </div>
+                <span class="brand-text">FANKOIN</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#problem" class="nav-link">Problem</a>
+                <a href="#solution" class="nav-link">Solution</a>
+                <a href="#tokenomics" class="nav-link">Tokenomics</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+                <button class="launch-btn">Launch App</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="badge-icon">⚡</div>
+                <span>The Future of Entertainment</span>
+            </div>
+            <h1 class="hero-title">
+                Welcome to
+                <span class="gradient-text">FANKOIN</span>
+            </h1>
+            <p class="hero-subtitle">
+                The revolutionary blockchain platform connecting fans, creators, and entertainment 
+                through tokenization, NFTs, and decentralized experiences.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary">
+                    <span>Get Started</span>
+                    <div class="btn-arrow">→</div>
+                </button>
+                <button class="btn-secondary">
+                    <div class="play-icon">▶</div>
+                    <span>Watch Demo</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Active Users</div>
+                    <div class="stat-growth">Growing daily</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$50M+</div>
+                    <div class="stat-label">Volume Traded</div>
+                    <div class="stat-growth">Last 30 days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Creators</div>
+                    <div class="stat-growth">Verified partners</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem-section">
+        <div class="section-bg">
+            <div class="bg-orb bg-orb-1"></div>
+            <div class="bg-orb bg-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <div class="badge-icon">⚠️</div>
+                    <span>Industry Crisis</span>
+                </div>
+                <h2 class="section-title">
+                    The Entertainment
+                    <span class="gradient-text">Industry Crisis</span>
+                </h2>
+                <p class="section-subtitle">
+                    The entertainment industry faces critical challenges that prevent creators and fans 
+                    from reaching their full potential in the digital age
+                </p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Fragmented Fan Engagement</h3>
+                    <p>Fans scattered across multiple platforms with no unified experience or meaningful connection to creators</p>
+                    <div class="impact-badge">$12B lost annually</div>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">💰</div>
+                    <h3>Revenue Lost to Intermediaries</h3>
+                    <p>Creators lose 30-70% of revenue to platform fees, agents, and complex distribution chains</p>
+                    <div class="impact-badge">$18B in creator losses</div>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Complex Tokenization</h3>
+                    <p>Current blockchain solutions require technical expertise that 99% of creators don't possess</p>
+                    <div class="impact-badge">95% adoption barrier</div>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">📉</div>
+                    <h3>Unsustainable Meme Tokens</h3>
+                    <p>Most fan tokens are pump-and-dump schemes with no real utility or long-term value proposition</p>
+                    <div class="impact-badge">$8B in fan losses</div>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Illiquid Real-World Assets</h3>
+                    <p>Royalties, tickets, and IP rights remain locked in traditional systems, preventing fan participation</p>
+                    <div class="impact-badge">$25B untapped market</div>
+                </div>
+            </div>
+            <div class="crisis-summary">
+                <div class="crisis-icon">💰</div>
+                <div class="crisis-arrow">↓</div>
+                <div class="crisis-icon">📉</div>
+                <div class="crisis-text">
+                    <div class="crisis-amount">$63B+ Lost Annually</div>
+                    <div class="crisis-desc">Due to inefficiencies in entertainment monetization and fan engagement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution-section">
+        <div class="section-bg">
+            <div class="bg-orb bg-orb-3"></div>
+            <div class="bg-orb bg-orb-4"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <div class="badge-icon">✅</div>
+                    <span>The Solution</span>
+                </div>
+                <h2 class="section-title">
+                    The Fankoin
+                    <span class="gradient-text">Revolution</span>
+                </h2>
+                <p class="section-subtitle">
+                    A comprehensive blockchain ecosystem designed specifically for entertainment, 
+                    connecting fans, creators, and studios like never before
+                </p>
+            </div>
+            <div class="solution-content">
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <div class="feature-content">
+                            <h3>Fan Token Launchpad</h3>
+                            <p>1-click token creation for creators with zero technical knowledge required. Launch in minutes, not months.</p>
+                            <div class="benefit-badge">95% faster deployment</div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-content">
+                            <h3>NFT & RWA Infrastructure</h3>
+                            <p>Tokenize tickets, royalties, and IP rights with enterprise-grade security and regulatory compliance.</p>
+                            <div class="benefit-badge">Bank-level security</div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🗳️</div>
+                        <div class="feature-content">
+                            <h3>Governance & Fan Voting</h3>
+                            <p>True fan participation in creative decisions, project direction, and community governance.</p>
+                            <div class="benefit-badge">100% transparent voting</div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💎</div>
+                        <div class="feature-content">
+                            <h3>Direct Creator Monetization</h3>
+                            <p>Cut out middlemen and maximize creator revenue streams through multiple tokenized channels.</p>
+                            <div class="benefit-badge">70% more revenue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecosystem-visual">
+                    <div class="ecosystem-hub">
+                        <div class="hub-center">
+                            <div class="hub-icon">💎</div>
+                            <div class="hub-text">FANKOIN</div>
+                        </div>
+                        <div class="orbit-item orbit-1">
+                            <div class="orbit-icon">👥</div>
+                            <div class="orbit-label">Fans</div>
+                        </div>
+                        <div class="orbit-item orbit-2">
+                            <div class="orbit-icon">🎭</div>
+                            <div class="orbit-label">Creators</div>
+                        </div>
+                        <div class="orbit-item orbit-3">
+                            <div class="orbit-icon">🎬</div>
+                            <div class="orbit-label">Studios</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="tokenomics-section">
+        <div class="section-bg">
+            <div class="bg-orb bg-orb-5"></div>
+            <div class="bg-orb bg-orb-6"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <div class="badge-icon">💎</div>
+                    <span>Token Economics</span>
+                </div>
+                <h2 class="section-title">
+                    How <span class="gradient-text">$FANK</span> Works
+                </h2>
+                <p class="section-subtitle">
+                    Understanding the token flow that powers the entire Fankoin ecosystem and creates value for all participants
+                </p>
+            </div>
+            <div class="token-flow">
+                <div class="flow-item">
+                    <div class="flow-icon fank-token">💎</div>
+                    <h3>$FANK Token</h3>
+                    <p>Core utility token powering the ecosystem</p>
+                    <div class="token-badge">Utility + Governance</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-item">
+                    <div class="flow-icon fan-token">🎭</div>
+                    <h3>Fan Tokens</h3>
+                    <p>Creator-specific tokens for exclusive access</p>
+                    <div class="token-badge">Access + Rewards</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-item">
+                    <div class="flow-icon ecosystem">🌐</div>
+                    <h3>Ecosystem</h3>
+                    <p>Fans ↔ Creators ↔ Studios interaction</p>
+                    <div class="token-badge">Value Creation</div>
+                </div>
+            </div>
+            <div class="tokenomics-stats">
+                <div class="stat-item">
+                    <div class="stat-value">$50M+</div>
+                    <div class="stat-desc">Total Volume</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">500K+</div>
+                    <div class="stat-desc">Transactions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">1,200+</div>
+                    <div class="stat-desc">Fan Tokens</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-desc">Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap-section">
+        <div class="section-bg">
+            <div class="bg-orb bg-orb-7"></div>
+            <div class="bg-orb bg-orb-8"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <div class="badge-icon">📅</div>
+                    <span>Development Timeline</span>
+                </div>
+                <h2 class="section-title">
+                    Fankoin <span class="gradient-text">Roadmap</span>
+                </h2>
+                <p class="section-subtitle">
+                    Our strategic journey to revolutionize entertainment through blockchain technology, 
+                    with clear milestones and measurable outcomes
+                </p>
+            </div>
+            <div class="roadmap-timeline">
+                <div class="timeline-line"></div>
+                <div class="roadmap-phase phase-active">
+                    <div class="phase-connector"></div>
+                    <div class="phase-content">
+                        <div class="phase-status">In Progress</div>
+                        <div class="phase-icon">🚀</div>
+                        <div class="phase-period">2024 Q4</div>
+                        <h3>Foundation Launch</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <div class="progress-text">75% Complete</div>
+                        <ul class="phase-items">
+                            <li class="completed">✅ Blockchain launch & $FANK token distribution</li>
+                            <li class="completed">✅ MVP launchpad for fan tokens</li>
+                            <li class="completed">✅ Pilot partnerships with 50+ creators</li>
+                            <li class="in-progress">🔄 Core team expansion to 25 members</li>
+                            <li>⏳ Security audits and compliance framework</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-phase phase-upcoming">
+                    <div class="phase-connector"></div>
+                    <div class="phase-content">
+                        <div class="phase-status">Next Up</div>
+                        <div class="phase-icon">🎨</div>
+                        <div class="phase-period">2025 Q1-Q2</div>
+                        <h3>Ecosystem Growth</h3>
+                        <ul class="phase-items">
+                            <li>⭐ NFT marketplace integration</li>
+                            <li>⭐ Creator & fan dashboards launch</li>
+                            <li>⭐ DAO governance voting system</li>
+                            <li>⭐ 100+ entertainment partnerships</li>
+                            <li>⭐ Mobile app beta release</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-phase phase-planned">
+                    <div class="phase-connector"></div>
+                    <div class="phase-content">
+                        <div class="phase-status">Planned</div>
+                        <div class="phase-icon">🌍</div>
+                        <div class="phase-period">2025 Q3-Q4</div>
+                        <h3>Global Expansion</h3>
+                        <ul class="phase-items">
+                            <li>⭐ RWA monetization platform</li>
+                            <li>⭐ International market expansion</li>
+                            <li>⭐ 10M+ registered users target</li>
+                            <li>⭐ Enterprise studio integrations</li>
+                            <li>⭐ Cross-chain compatibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+            <div class="cta-orb cta-orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <div class="badge-icon">✨</div>
+                    <span>The Future is Here</span>
+                </div>
+                <h2 class="cta-title">
+                    Join the Future of
+                    <span class="gradient-text">Entertainment</span>
+                </h2>
+                <p class="cta-subtitle">
+                    Fankoin = Entertainment × Blockchain × Community
+                </p>
+                <p class="cta-description">
+                    Be part of the revolution that's reshaping how creators and fans connect, 
+                    engage, and prosper together in the digital entertainment ecosystem.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn-primary">
+                        <span>Get Started Now</span>
+                        <div class="btn-arrow">→</div>
+                    </button>
+                    <button class="btn-secondary">
+                        <div class="download-icon">📄</div>
+                        <span>Download Whitepaper</span>
+                    </button>
+                </div>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Fans Ready to Join</div>
+                    </div>
+                    <div class="cta-stat">
+                        <div class="stat-icon">🚀</div>
+                        <div class="stat-number">$50M+</div>
+                        <div class="stat-label">In Creator Value</div>
+                    </div>
+                    <div class="cta-stat">
+                        <div class="stat-icon">✨</div>
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Global Access</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <div class="lightning-bolt"></div>
+                        </div>
+                        <span class="brand-text">FANKOIN</span>
+                    </div>
+                    <p class="footer-desc">
+                        Revolutionizing entertainment through blockchain technology. 
+                        Connecting fans, creators, and studios in a decentralized ecosystem.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">💬</a>
+                        <a href="#" class="social-link">📱</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="#">Token Launchpad</a>
+                        <a href="#">NFT Marketplace</a>
+                        <a href="#">RWA Tokenization</a>
+                        <a href="#">DAO Governance</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="#">Whitepaper</a>
+                        <a href="#">Documentation</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Community</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Team</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="footer-copy">
+                    © 2024 Fankoin. All rights reserved.
+                </div>
+                <button class="scroll-top" onclick="scrollToTop()">↑</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
