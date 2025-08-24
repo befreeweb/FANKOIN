@@ -22,25 +22,25 @@ export const CTA = () => {
           <div className="space-y-8">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
               <Sparkles className="h-6 w-6 text-pink-200" />
-              <span className="text-white font-semibold text-lg">The Future is Here</span>
+              <span className="text-white font-semibold text-lg">The Ask</span>
             </div>
             
             <h2 className="text-6xl md:text-8xl font-black text-white leading-tight text-shadow">
-              Join the Future of
+              We Are Seeking
               <br />
-              <span className="bg-gradient-to-r from-pink-200 to-purple-200 bg-clip-text text-transparent">
-                Entertainment
+              <span className="gradient-text">
+                Strategic Partners
               </span>
             </h2>
             
             <div className="space-y-6">
               <p className="text-3xl text-purple-100 font-bold max-w-4xl mx-auto">
-                Fankoin = Entertainment × Blockchain × Community
+                $5M via Founder NFT pre-sale
               </p>
               
               <p className="text-xl text-purple-200 max-w-3xl mx-auto leading-relaxed">
-                Be part of the revolution that's reshaping how creators and fans connect, 
-                engage, and prosper together in the digital entertainment ecosystem.
+                Strategic investors with entertainment & blockchain expertise.
+                Partnerships with studios, OTT platforms, and talent agencies.
               </p>
             </div>
           </div>
@@ -48,13 +48,13 @@ export const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <button className="group bg-white text-purple-600 px-12 py-6 rounded-full font-bold text-xl hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25 flex items-center space-x-3">
               <Zap className="h-7 w-7 group-hover:text-pink-500 transition-colors" />
-              <span>Get Started Now</span>
+              <span>Join as Investor</span>
               <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </button>
             
             <button className="group border-3 border-white text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-3">
               <Download className="h-7 w-7" />
-              <span>Download Whitepaper</span>
+              <span>Partnership Inquiry</span>
             </button>
           </div>
 
@@ -65,9 +65,9 @@ export const CTA = () => {
                   <Users className="h-10 w-10 text-white" />
                 </div>
               </div>
-              <div className="text-4xl font-black text-white mb-3">1M+</div>
-              <div className="text-purple-200 text-lg">Fans Ready to Join</div>
-              <div className="text-pink-200 text-sm mt-2">Growing daily</div>
+              <div className="text-4xl font-black text-white mb-3">$5M</div>
+              <div className="text-purple-200 text-lg">Founder NFT Raise</div>
+              <div className="text-pink-200 text-sm mt-2">5,000 NFTs @ $1,000</div>
             </div>
             
             <div className="glass-effect rounded-3xl p-8 border border-white/20 hover-lift">
@@ -76,9 +76,9 @@ export const CTA = () => {
                   <Rocket className="h-10 w-10 text-white" />
                 </div>
               </div>
-              <div className="text-4xl font-black text-white mb-3">$50M+</div>
-              <div className="text-purple-200 text-lg">In Creator Value</div>
-              <div className="text-pink-200 text-sm mt-2">Projected Year 1</div>
+              <div className="text-4xl font-black text-white mb-3">Strategic</div>
+              <div className="text-purple-200 text-lg">Investors Needed</div>
+              <div className="text-pink-200 text-sm mt-2">Entertainment & Blockchain</div>
             </div>
             
             <div className="glass-effect rounded-3xl p-8 border border-white/20 hover-lift">
@@ -87,9 +87,9 @@ export const CTA = () => {
                   <Sparkles className="h-10 w-10 text-white" />
                 </div>
               </div>
-              <div className="text-4xl font-black text-white mb-3">24/7</div>
-              <div className="text-purple-200 text-lg">Global Access</div>
-              <div className="text-pink-200 text-sm mt-2">Always available</div>
+              <div className="text-4xl font-black text-white mb-3">Studios</div>
+              <div className="text-purple-200 text-lg">Partnership Target</div>
+              <div className="text-pink-200 text-sm mt-2">OTT & Talent Agencies</div>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export const CTA = () => {
             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-6 inline-block shadow-2xl pulse-glow">
               <p className="text-white font-bold text-lg flex items-center space-x-2">
                 <Rocket className="h-6 w-6" />
-                <span>🚀 Early adopters get exclusive access to token presale and founder benefits</span>
+                <span>🚀 Join the founding team of the next entertainment revolution</span>
               </p>
             </div>
           </div>

@@ -6,35 +6,35 @@ export const Founder = () => {
     {
       year: "2005",
       title: "BusinessOfCinema.com Launch",
-      description: "Launched the first Indian entertainment industry portal",
+      description: "Launched BusinessOfCinema.com – the first Indian entertainment industry portal.",
       icon: <Award className="h-8 w-8" />,
       color: "from-blue-500 to-purple-600"
     },
     {
       year: "2008",
       title: "Facebook Live Pioneer",
-      description: "Produced the world's first Facebook Live stream for Indian cinema",
+      description: "Produced the world's first Facebook Live stream for Indian cinema.",
       icon: <Star className="h-8 w-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       year: "2008-2012",
       title: "Digital Migration Leader",
-      description: "Led mass migration of Indian actors & studios to Facebook and YouTube",
+      description: "Led the mass migration of Indian actors & studios to Facebook and YouTube.",
       icon: <Users className="h-8 w-8" />,
       color: "from-pink-500 to-purple-600"
     },
     {
       year: "2015",
       title: "Ethereum Collaboration",
-      description: "Collaborated with Taylor Gerring, Ethereum Co-Founder, on blockchain initiatives",
+      description: "Collaborated with Taylor Gerring, Ethereum Co-Founder, on blockchain advisory initiatives.",
       icon: <Zap className="h-8 w-8" />,
       color: "from-purple-600 to-blue-500"
     },
     {
       year: "2025",
       title: "Fankoin Launch",
-      description: "Launch of the fractionalized NFT & creator economy platform",
+      description: "Launch of Fankoin – the fractionalized NFT & creator economy platform for the entertainment industry.",
       icon: <TrendingUp className="h-8 w-8" />,
       color: "from-pink-500 to-purple-500"
     }
@@ -53,12 +53,12 @@ export const Founder = () => {
         <div className="text-center mb-20 fade-in-up">
           <div className="inline-flex items-center space-x-2 glass-effect rounded-full px-6 py-3 border border-purple-500/20 mb-8">
             <Calendar className="h-5 w-5 text-purple-400" />
-            <span className="text-purple-300 font-medium">Proven Leadership</span>
+            <span className="text-purple-300 font-medium">Founder Spotlight</span>
           </div>
           
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 text-shadow">
-            Digital Entertainment &
-            <span className="block gradient-text">Blockchain Pioneers</span>
+            Proven Digital Entertainment &
+            <span className="block gradient-text">Blockchain Leadership</span>
           </h2>
           
           <p className="text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
@@ -108,10 +108,12 @@ export const Founder = () => {
               <Award className="h-12 w-12" />
               <div className="text-6xl">🏆</div>
             </div>
-            <h3 className="text-4xl font-bold mb-6">20 Years of Digital Innovation</h3>
+            <h3 className="text-4xl font-bold mb-6">Timeline of Innovation</h3>
             <p className="text-purple-100 mb-8 text-xl max-w-3xl mx-auto leading-relaxed">
+              2005 → 2008 → 2015 → 2025
+              <br />
               From pioneering entertainment portals to blockchain collaboration with Ethereum's co-founder, 
-              our team brings unmatched expertise to the creator economy revolution.
+              bringing blockchain to global entertainment fans.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-white/10 rounded-2xl p-6">

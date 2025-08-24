@@ -20,15 +20,20 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-black text-white leading-tight text-shadow">
-              Where Fans Own
+              Fankoin – Where Fans
               <br />
-              <span className="gradient-text">The Story</span>
+              <span className="gradient-text">Own The Story</span>
             </h1>
             
-            <p className="text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Built by proven digital entertainment pioneers and blockchain visionaries, including 
-              collaboration with Taylor Gerring, Co-Founder of Ethereum. Revolutionizing entertainment through fractionalized NFTs.
-            </p>
+            <div className="space-y-6">
+              <p className="text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+                Pioneered by the team behind BusinessOfCinema.com (est. 2005) and the first Facebook livestream of Indian cinema (2008).
+              </p>
+              
+              <p className="text-xl text-purple-300 max-w-3xl mx-auto leading-relaxed">
+                Built with blockchain visionaries, including collaboration with Taylor Gerring, Co-Founder of Ethereum.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
@@ -45,21 +50,21 @@ export const Hero = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-16">
             <div className="glass-effect rounded-2xl p-8 border border-white/10 hover-lift">
-              <div className="text-4xl font-black text-pink-400 mb-3">1M+</div>
-              <div className="text-slate-300 text-lg">Active Users</div>
-              <div className="text-pink-300 text-sm mt-2">Growing daily</div>
+              <div className="text-4xl font-black text-pink-400 mb-3">$2.1T</div>
+              <div className="text-slate-300 text-lg">Entertainment Industry</div>
+              <div className="text-pink-300 text-sm mt-2">Market Size</div>
             </div>
             
             <div className="glass-effect rounded-2xl p-8 border border-white/10 hover-lift">
-              <div className="text-4xl font-black text-purple-400 mb-3">$50M+</div>
-              <div className="text-slate-300 text-lg">Volume Traded</div>
-              <div className="text-purple-300 text-sm mt-2">Last 30 days</div>
+              <div className="text-4xl font-black text-purple-400 mb-3">$1.4T</div>
+              <div className="text-slate-300 text-lg">Projected Creator Economy</div>
+              <div className="text-purple-300 text-sm mt-2">By 2030</div>
             </div>
             
             <div className="glass-effect rounded-2xl p-8 border border-white/10 hover-lift">
-              <div className="text-4xl font-black text-blue-400 mb-3">500+</div>
-              <div className="text-slate-300 text-lg">Creators</div>
-              <div className="text-blue-300 text-sm mt-2">Verified partners</div>
+              <div className="text-4xl font-black text-blue-400 mb-3">200M+</div>
+              <div className="text-slate-300 text-lg">Total Creators Worldwide</div>
+              <div className="text-blue-300 text-sm mt-2">Global reach</div>
             </div>
           </div>
         </div>

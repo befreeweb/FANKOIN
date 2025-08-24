@@ -4,34 +4,34 @@ import { Rocket, Shield, Vote, Coins, Network, CheckCircle, Sparkles } from 'luc
 export const Solution = () => {
   const features = [
     {
-      icon: <Rocket className="h-10 w-10" />,
-      title: "Fan Token Launchpad",
-      description: "1-click token creation for creators with zero technical knowledge required. Launch in minutes, not months.",
-      benefit: "95% faster deployment"
+      icon: <Coins className="h-10 w-10" />,
+      title: "Fan Tokens",
+      description: "Digital assets linked to creators, movies, and studios, allowing fans to own a piece of their favorite entertainment.",
+      benefit: "Direct ownership"
     },
     {
       icon: <Shield className="h-10 w-10" />,
-      title: "NFT & RWA Infrastructure",
-      description: "Tokenize tickets, royalties, and IP rights with enterprise-grade security and regulatory compliance.",
-      benefit: "Bank-level security"
+      title: "FAN-FRAC Model",
+      description: "NFTs that can be fractionalized for broader ownership, making high-value entertainment assets accessible to all fans.",
+      benefit: "Democratized access"
+    },
+    {
+      icon: <Sparkles className="h-10 w-10" />,
+      title: "Creator Assets",
+      description: "Digital collectibles, passes, and perks minted directly by creators for their most dedicated fans.",
+      benefit: "Exclusive experiences"
     },
     {
       icon: <Vote className="h-10 w-10" />,
-      title: "Governance & Fan Voting",
-      description: "True fan participation in creative decisions, project direction, and community governance.",
-      benefit: "100% transparent voting"
-    },
-    {
-      icon: <Coins className="h-10 w-10" />,
-      title: "Direct Creator Monetization",
-      description: "Cut out middlemen and maximize creator revenue streams through multiple tokenized channels.",
-      benefit: "70% more revenue"
+      title: "Fan Participation",
+      description: "True fan participation in creative decisions, project direction, and community governance through token ownership.",
+      benefit: "Active engagement"
     },
     {
       icon: <Network className="h-10 w-10" />,
-      title: "Entertainment-Optimized Chain",
-      description: "Blockchain built specifically for entertainment industry needs with ultra-low fees and high throughput.",
-      benefit: "99.9% uptime guaranteed"
+      title: "Micro-Investment Platform",
+      description: "Turning global fanbases into engaged micro-investors with real ownership and financial upside.",
+      benefit: "Financial participation"
     }
   ];
 
@@ -48,18 +48,25 @@ export const Solution = () => {
         <div className="text-center mb-20 fade-in-up">
           <div className="inline-flex items-center space-x-2 bg-green-500/10 backdrop-blur-sm rounded-full px-6 py-3 border border-green-500/20 mb-8">
             <CheckCircle className="h-5 w-5 text-green-400" />
-            <span className="text-green-300 font-medium">The Solution</span>
+            <span className="text-green-300 font-medium">The Vision</span>
           </div>
           
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 text-shadow">
-            The Fankoin
-            <span className="block gradient-text">Vision</span>
+            Fankoin's
+            <span className="block gradient-text">Mission</span>
           </h2>
           
-          <p className="text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed mb-8">
             To revolutionize entertainment by allowing fans to own a piece of the stories they love 
-            through fractionalized NFTs and creator-issued assets
+            through fractionalized NFTs and creator-issued assets.
           </p>
+          
+          <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl p-8 max-w-3xl mx-auto border border-purple-400/30">
+            <p className="text-purple-100 text-lg leading-relaxed">
+              Fankoin unlocks active fan participation, ownership, and financial upside, 
+              turning global fanbases into engaged micro-investors.
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
@@ -117,7 +124,7 @@ export const Solution = () => {
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
                   <div className="text-4xl mb-3">👥</div>
                   <p className="text-white font-bold text-lg">Fans</p>
-                  <p className="text-purple-200 text-sm mt-2">Engage & Earn</p>
+                  <p className="text-purple-200 text-sm mt-2">Own & Invest</p>
                 </div>
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
                   <div className="text-4xl mb-3">🎨</div>
@@ -127,7 +134,7 @@ export const Solution = () => {
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
                   <div className="text-4xl mb-3">🎬</div>
                   <p className="text-white font-bold text-lg">Studios</p>
-                  <p className="text-purple-200 text-sm mt-2">Industry Optimized</p>
+                  <p className="text-purple-200 text-sm mt-2">Scale & Engage</p>
                 </div>
               </div>
             </div>
