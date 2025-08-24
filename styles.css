@@ -696,43 +696,6 @@ body {
     display: inline-block;
 }
 
-.crisis-summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    background: linear-gradient(135deg, #ef4444, #f97316);
-    border-radius: 24px;
-    padding: 40px;
-    animation: glow 3s ease-in-out infinite;
-}
-
-.crisis-icon {
-    font-size: 4rem;
-}
-
-.crisis-arrow {
-    font-size: 2rem;
-    color: white;
-    animation: bounce 2s infinite;
-}
-
-.crisis-text {
-    text-align: center;
-}
-
-.crisis-amount {
-    font-size: 2rem;
-    font-weight: 900;
-    color: white;
-    margin-bottom: 8px;
-}
-
-.crisis-desc {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-}
-
 /* Solution Section */
 .solution-section {
     padding: 120px 0;
