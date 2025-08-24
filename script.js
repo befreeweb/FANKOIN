@@ -319,3 +319,143 @@ rainbowStyle.textContent = `
     }
 `;
 document.head.appendChild(rainbowStyle);
+
+// Slideshow functionality
+let currentSlide = 1;
+let totalSlides = 8;
+let isPlaying = true;
+let slideInterval;
+let progressInterval;
+let progress = 0;
+
+// Initialize slideshow
+function initSlideshow() {
+    startSlideshow();
+    updateSlideCounter();
+    
+    // Event listeners
+    document.getElementById('prevBtn').addEventListener('click', previousSlide);
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+    document.getElementById('playPauseBtn').addEventListener('click', togglePlayPause);
+    
+    // Indicator clicks
+    document.querySelectorAll('.indicator').forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index + 1));
+    });
+    
+    // Keyboard controls
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') previousSlide();
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            nextSlide();
+        }
+        if (e.key === 'Escape') togglePlayPause();
+    });
+}
+
+function startSlideshow() {
+    if (slideInterval) clearInterval(slideInterval);
+    if (progressInterval) clearInterval(progressInterval);
+    
+    progress = 0;
+    
+    slideInterval = setInterval(() => {
+        nextSlide();
+    }, 8000);
+    
+    progressInterval = setInterval(() => {
+        progress += 0.125; // 8000ms / 100 = 80, 100/80 = 1.25, but we want smoother so /10 = 0.125
+        if (progress >= 100) {
+            progress = 0;
+        }
+        document.getElementById('progressBar').style.width = progress + '%';
+    }, 10);
+}
+
+function stopSlideshow() {
+    if (slideInterval) clearInterval(slideInterval);
+    if (progressInterval) clearInterval(progressInterval);
+}
+
+function nextSlide() {
+    currentSlide = currentSlide >= totalSlides ? 1 : currentSlide + 1;
+    showSlide(currentSlide);
+    progress = 0;
+}
+
+function previousSlide() {
+    currentSlide = currentSlide <= 1 ? totalSlides : currentSlide - 1;
+    showSlide(currentSlide);
+    progress = 0;
+}
+
+function goToSlide(slideNum) {
+    currentSlide = slideNum;
+    showSlide(currentSlide);
+    progress = 0;
+}
+
+function showSlide(slideNum) {
+    // Hide all slides
+    document.querySelectorAll('.slide').forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    // Show current slide
+    const targetSlide = document.querySelector(`[data-slide="${slideNum}"]`);
+    if (targetSlide) {
+        targetSlide.classList.add('active');
+    }
+    
+    // Update indicators
+    document.querySelectorAll('.indicator').forEach((indicator, index) => {
+        indicator.classList.toggle('active', index + 1 === slideNum);
+    });
+    
+    updateSlideCounter();
+}
+
+function togglePlayPause() {
+    const btn = document.getElementById('playPauseBtn');
+    if (isPlaying) {
+        stopSlideshow();
+        btn.textContent = '▶️ Play';
+        isPlaying = false;
+    } else {
+        startSlideshow();
+        btn.textContent = '⏸️ Pause';
+        isPlaying = true;
+    }
+}
+
+function updateSlideCounter() {
+    document.getElementById('currentSlideNum').textContent = currentSlide;
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.slideshow-section')) {
+        initSlideshow();
+    }
+});
+
+// Pause slideshow when user scrolls away from section
+let slideshowSection = null;
+
+window.addEventListener('scroll', () => {
+    if (!slideshowSection) {
+        slideshowSection = document.querySelector('.slideshow-section');
+    }
+    
+    if (slideshowSection) {
+        const rect = slideshowSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (!isVisible && isPlaying) {
+            stopSlideshow();
+        } else if (isVisible && isPlaying && !slideInterval) {
+            startSlideshow();
+        }
+    }
+});

@@ -614,6 +614,658 @@ body {
     margin: 0 auto;
 }
 
+/* Slideshow Section */
+.slideshow-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.slideshow-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.slide-wrapper {
+    position: relative;
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(236, 72, 153, 0.2);
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ec4899;
+    width: fit-content;
+}
+
+.slide-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    color: white;
+}
+
+.slide-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Slide 1 - Cover */
+.highlight-box {
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.slide-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #e0e7ff;
+}
+
+.slide-text.accent {
+    color: #a855f7;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 24px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ec4899;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+/* Slide 2 - Founder */
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fbbf24;
+    min-width: 120px;
+}
+
+.timeline-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #e0e7ff;
+}
+
+/* Slide 3 - Vision */
+.mission-box {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.mission-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #86efac;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    min-width: 60px;
+}
+
+.feature-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #22c55e;
+    margin-bottom: 8px;
+}
+
+.feature-content p {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+/* Slide 4 - Problem & Opportunity */
+.problem-opportunity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.problem-section {
+    background: rgba(239, 68, 68, 0.1);
+    border: 2px solid rgba(239, 68, 68, 0.3);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.opportunity-section {
+    background: rgba(34, 197, 94, 0.1);
+    border: 2px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.section-icon {
+    font-size: 2.5rem;
+}
+
+.section-header h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.problem-section h4 {
+    color: #fca5a5;
+}
+
+.opportunity-section h4 {
+    color: #86efac;
+}
+
+.problem-section p {
+    color: #fecaca;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.opportunity-section p {
+    color: #bbf7d0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.transformation {
+    text-align: center;
+    background: linear-gradient(90deg, #ef4444, #22c55e);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.transform-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Slide 5 - NFT Pre-Sale */
+.calculation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.calc-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    min-width: 150px;
+}
+
+.calc-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.calc-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fbbf24;
+    margin-bottom: 8px;
+}
+
+.calc-label {
+    color: #fde68a;
+    font-size: 1rem;
+}
+
+.calc-operator {
+    font-size: 3rem;
+    color: #fbbf24;
+    font-weight: 900;
+}
+
+.perks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.perk-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 24px;
+    text-align: center;
+}
+
+.perk-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.perk-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fef3c7;
+    margin-bottom: 12px;
+}
+
+.perk-desc {
+    color: #fde68a;
+    line-height: 1.5;
+}
+
+/* Slide 6 - Tokenomics */
+.token-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.token-icon {
+    font-size: 3rem;
+}
+
+.token-name {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.token-desc {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.revenue-streams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.revenue-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.revenue-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.revenue-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #a855f7;
+    margin-bottom: 12px;
+}
+
+.revenue-desc {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+/* Slide 7 - Timeline */
+.timeline-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.timeline-step {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.step-year {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #7dd3fc;
+    margin-bottom: 12px;
+}
+
+.step-event {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #e0f2fe;
+}
+
+.flow-arrow {
+    font-size: 2rem;
+    color: #7dd3fc;
+    font-weight: 900;
+}
+
+.innovation-summary {
+    background: rgba(125, 211, 252, 0.1);
+    border: 1px solid rgba(125, 211, 252, 0.3);
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+}
+
+.innovation-summary h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #7dd3fc;
+    margin-bottom: 24px;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 24px;
+}
+
+.summary-stat {
+    text-align: center;
+}
+
+.summary-number {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.summary-label {
+    color: #e0f2fe;
+    font-size: 0.9rem;
+}
+
+/* Slide 8 - The Ask */
+.ask-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.ask-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.ask-icon {
+    font-size: 2.5rem;
+    min-width: 60px;
+}
+
+.ask-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fef3c7;
+    margin-bottom: 12px;
+}
+
+.ask-desc {
+    color: #fde68a;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.join-cta {
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+}
+
+.join-cta h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.join-cta p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* Slideshow Controls */
+.slideshow-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ec4899, #a855f7);
+    border-radius: 2px;
+    transition: width 0.1s linear;
+    width: 0%;
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #ec4899;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.slide-counter {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide {
+        padding: 40px 20px;
+    }
+    
+    .slide-title {
+        font-size: 2rem;
+    }
+    
+    .problem-opportunity {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculation {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .calc-operator {
+        transform: rotate(90deg);
+    }
+    
+    .timeline-flow {
+        flex-direction: column;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .slideshow-controls {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .control-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+
 /* Problem Section */
 .problem-section {
     padding: 120px 0;
