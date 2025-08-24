@@ -52,13 +52,13 @@ export const Problem = () => {
           </div>
           
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 text-shadow">
-            The Entertainment
-            <span className="block gradient-text">Industry Crisis</span>
+            The Problem &
+            <span className="block gradient-text">Opportunity</span>
           </h2>
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            The entertainment industry faces critical challenges that prevent creators and fans 
-            from reaching their full potential in the digital age
+            Fans are passionate, but current platforms limit them to being passive consumers. 
+            Fankoin unlocks active fan participation, ownership, and financial upside.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export const Problem = () => {
             <div key={index} className="group hover-lift h-full">
               <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-pink-500/50 transition-all duration-300 h-full relative overflow-hidden">
                 {/* Background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-purple-500/5 group-hover:from-pink-500/10 group-hover:to-purple-500/10 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 group-hover:from-red-500/10 group-hover:to-orange-500/10 transition-opacity"></div>
                 
                 <div className="relative z-10">
                   <div className="text-red-400 mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -91,15 +91,15 @@ export const Problem = () => {
         <div className="text-center fade-in-up">
           <div className="inline-block bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-8 shadow-2xl">
             <div className="flex items-center justify-center space-x-4 mb-4">
-              <div className="text-6xl">💰</div>
+              <div className="text-6xl">🎯</div>
               <ArrowDown className="h-8 w-8 text-white animate-bounce" />
-              <div className="text-6xl">📉</div>
+              <div className="text-6xl">🚀</div>
             </div>
             <p className="text-white font-bold text-2xl mb-2">
-              $63B+ Lost Annually
+              Global Fanbase = Micro-Investors
             </p>
             <p className="text-orange-100 text-lg">
-              Due to inefficiencies in entertainment monetization and fan engagement
+              Turning passionate fans into engaged stakeholders with real ownership and upside
             </p>
           </div>
         </div>

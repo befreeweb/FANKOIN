@@ -53,12 +53,12 @@ export const Solution = () => {
           
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 text-shadow">
             The Fankoin
-            <span className="block gradient-text">Revolution</span>
+            <span className="block gradient-text">Vision</span>
           </h2>
           
           <p className="text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed">
-            A comprehensive blockchain ecosystem designed specifically for entertainment, 
-            connecting fans, creators, and studios like never before
+            To revolutionize entertainment by allowing fans to own a piece of the stories they love 
+            through fractionalized NFTs and creator-issued assets
           </p>
         </div>
 
@@ -116,18 +116,18 @@ export const Solution = () => {
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
                   <div className="text-4xl mb-3">👥</div>
-                  <p className="text-white font-bold text-lg">Fans</p>
+                <Network className="h-10 w-10" />
                   <p className="text-purple-200 text-sm mt-2">Engage & Earn</p>
                 </div>
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
-                  <div className="text-4xl mb-3">🎭</div>
+                  Entertainment-First Blockchain
                   <p className="text-white font-bold text-lg">Creators</p>
                   <p className="text-purple-200 text-sm mt-2">Monetize & Connect</p>
-                </div>
+                  Built specifically for entertainment industry needs with ultra-low fees and high throughput
                 <div className="glass-effect rounded-2xl p-6 hover-lift">
                   <div className="text-4xl mb-3">🎬</div>
                   <p className="text-white font-bold text-lg">Studios</p>
-                  <p className="text-purple-200 text-sm mt-2">Scale & Innovate</p>
+                  <span className="text-green-300 font-semibold text-sm">Industry Optimized</span>
                 </div>
               </div>
             </div>

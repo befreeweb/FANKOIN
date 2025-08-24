@@ -16,18 +16,18 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="inline-flex items-center space-x-2 glass-effect rounded-full px-8 py-4 border border-pink-500/20">
               <Zap className="h-6 w-6 text-pink-400" />
-              <span className="text-pink-300 font-semibold text-lg">The Future of Entertainment</span>
+              <span className="text-pink-300 font-semibold text-lg">Pioneered by BusinessOfCinema.com (Est. 2005)</span>
             </div>
             
             <h1 className="text-6xl md:text-8xl font-black text-white leading-tight text-shadow">
-              Welcome to
+              Where Fans Own
               <br />
-              <span className="gradient-text">FANKOIN</span>
+              <span className="gradient-text">The Story</span>
             </h1>
             
             <p className="text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              The revolutionary blockchain platform connecting fans, creators, and entertainment 
-              through tokenization, NFTs, and decentralized experiences.
+              Built by proven digital entertainment pioneers and blockchain visionaries, including 
+              collaboration with Taylor Gerring, Co-Founder of Ethereum. Revolutionizing entertainment through fractionalized NFTs.
             </p>
           </div>
 

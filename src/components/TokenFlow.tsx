@@ -19,11 +19,12 @@ export const TokenFlow = () => {
           </div>
           
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 text-shadow">
-            How <span className="gradient-text">$FANK</span> Works
+            Tokenomics &
+            <span className="gradient-text">Revenue</span>
           </h2>
           
           <p className="text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed">
-            Understanding the token flow that powers the entire Fankoin ecosystem and creates value for all participants
+            Multiple revenue streams powering the Fankoin ecosystem and creating sustainable value for all participants
           </p>
         </div>
 
@@ -41,7 +42,7 @@ export const TokenFlow = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-white mt-6 mb-3">$FANK Token</h3>
-              <p className="text-purple-200 text-center max-w-40 leading-relaxed">Core utility token powering the ecosystem</p>
+              <p className="text-purple-200 text-center max-w-40 leading-relaxed">Fankoin Token (FKN) fuels platform transactions</p>
               <div className="mt-4 bg-purple-500/20 rounded-lg px-4 py-2 border border-purple-400/30">
                 <span className="text-purple-300 font-semibold text-sm">Utility + Governance</span>
               </div>
@@ -60,9 +61,9 @@ export const TokenFlow = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-white mt-6 mb-3">Fan Tokens</h3>
-              <p className="text-purple-200 text-center max-w-40 leading-relaxed">Creator-specific tokens for exclusive access</p>
+              <p className="text-purple-200 text-center max-w-40 leading-relaxed">Fractionalized NFT marketplace fees</p>
               <div className="mt-4 bg-pink-500/20 rounded-lg px-4 py-2 border border-pink-400/30">
-                <span className="text-pink-300 font-semibold text-sm">Access + Rewards</span>
+                <span className="text-pink-300 font-semibold text-sm">Marketplace Revenue</span>
               </div>
             </div>
 
@@ -86,9 +87,9 @@ export const TokenFlow = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-white mt-6 mb-3">Ecosystem</h3>
-              <p className="text-purple-200 text-center max-w-40 leading-relaxed">Fans ↔ Creators ↔ Studios interaction</p>
+              <p className="text-purple-200 text-center max-w-40 leading-relaxed">Creator assets, memberships & brand partnerships</p>
               <div className="mt-4 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-lg px-4 py-2 border border-purple-400/30">
-                <span className="text-purple-300 font-semibold text-sm">Value Creation</span>
+                <span className="text-purple-300 font-semibold text-sm">Multiple Revenue Streams</span>
               </div>
             </div>
           </div>
@@ -103,8 +104,7 @@ export const TokenFlow = () => {
               </div>
               <h4 className="font-bold text-white text-xl mb-4">Token Creation</h4>
               <p className="text-purple-200 leading-relaxed">
-                Creators use $FANK to launch their fan tokens through our intuitive launchpad. 
-                No coding required, just creativity.
+                Revenue from fractionalized NFT marketplace fees, creator asset sales and resale royalties.
               </p>
             </div>
           </div>
@@ -116,8 +116,7 @@ export const TokenFlow = () => {
               </div>
               <h4 className="font-bold text-white text-xl mb-4">Fan Engagement</h4>
               <p className="text-purple-200 leading-relaxed">
-                Fans purchase tokens to access exclusive content, participate in voting, 
-                and earn rewards for their loyalty.
+                Premium fan membership tiers provide recurring revenue and enhanced engagement opportunities.
               </p>
             </div>
           </div>
@@ -129,8 +128,7 @@ export const TokenFlow = () => {
               </div>
               <h4 className="font-bold text-white text-xl mb-4">Value Creation</h4>
               <p className="text-purple-200 leading-relaxed">
-                All participants earn rewards as the ecosystem grows, creating sustainable 
-                value for fans, creators, and studios.
+                Advertising & sponsorship from entertainment brands creates additional revenue streams.
               </p>
             </div>
           </div>
