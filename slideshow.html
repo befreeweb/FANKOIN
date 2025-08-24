@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fankoin Presentation Slideshow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .slide-content {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Slide 1 - Cover */
+        .slide1 {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+
+        /* Slide 2 - Founder */
+        .slide2 {
+            background: linear-gradient(135deg, #581c87 0%, #7c3aed 50%, #a855f7 100%);
+        }
+
+        /* Slide 3 - Vision */
+        .slide3 {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        /* Slide 4 - Problem */
+        .slide4 {
+            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 50%, #16a34a 100%);
+        }
+
+        /* Slide 5 - NFT */
+        .slide5 {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #ea580c 100%);
+        }
+
+        /* Slide 6 - Tokenomics */
+        .slide6 {
+            background: linear-gradient(135deg, #1e293b 0%, #475569 50%, #334155 100%);
+        }
+
+        /* Slide 7 - Timeline */
+        .slide7 {
+            background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0284c7 100%);
+        }
+
+        /* Slide 8 - Ask */
+        .slide8 {
+            background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #8b5cf6 100%);
+        }
+
+        .slide-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 12px 24px;
+            margin-bottom: 2rem;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .slide-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ec4899, #a855f7, #3b82f6);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .slide-subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            max-width: 800px;
+        }
+
+        .year {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 0.5rem;
+        }
+
+        .milestone {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #22c55e;
+        }
+
+        .feature-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        .problem-opportunity {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .problem-section, .opportunity-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .problem-section {
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .opportunity-section {
+            border: 2px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .calculation-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .calc-item {
+            text-align: center;
+        }
+
+        .calc-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .calc-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .perk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .perk-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .perk-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fef3c7;
+        }
+
+        .perk-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #fde68a;
+        }
+
+        .revenue-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .revenue-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .revenue-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #a855f7;
+        }
+
+        .revenue-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #cbd5e1;
+        }
+
+        .timeline-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .timeline-year {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .year-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #7dd3fc;
+        }
+
+        .year-event {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: #e0f2fe;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: #7dd3fc;
+        }
+
+        .ask-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ask-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .ask-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fef3c7;
+        }
+
+        .ask-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #fde68a;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Controls */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ec4899, #a855f7);
+            transition: width 0.3s ease;
+            z-index: 1000;
+        }
+
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 2rem;
+            }
+            
+            .problem-opportunity {
+                grid-template-columns: 1fr;
+            }
+            
+            .calculation-box {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .timeline-flow {
+                flex-direction: column;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Slide 1 - Cover -->
+        <div class="slide slide1 active">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>⚡</span>
+                    <span>Slide 1 - Cover</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    Fankoin – Where Fans
+                    <br><span class="gradient-text">Own the Story</span>
+                </h1>
+                
+                <div class="slide-subtitle">
+                    <p style="margin-bottom: 1rem;">
+                        Pioneered by the team behind <strong>BusinessOfCinema.com</strong> (est. 2005) and the first Facebook livestream of Indian cinema (2008).
+                    </p>
+                    <p style="color: #a855f7;">
+                        Built with blockchain visionaries, including collaboration with <strong>Taylor Gerring, Co-Founder of Ethereum</strong>.
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ec4899;">2005</div>
+                        <div class="stat-label">BusinessOfCinema.com</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #a855f7;">2008</div>
+                        <div class="stat-label">Facebook Live Pioneer</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #3b82f6;">2015</div>
+                        <div class="stat-label">Ethereum Collaboration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 - Founder Spotlight -->
+        <div class="slide slide2">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>🏆</span>
+                    <span>Slide 2 - Founder Spotlight</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    Proven Digital Entertainment &
+                    <br><span style="color: #fbbf24;">Blockchain Leadership</span>
+                </h1>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="timeline-item">
+                        <div class="year">2005</div>
+                        <div class="milestone">Launched BusinessOfCinema.com – the first Indian entertainment industry portal.</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="year">2008</div>
+                        <div class="milestone">Produced the world's first Facebook Live stream for Indian cinema.</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="year">2008–2012</div>
+                        <div class="milestone">Led the mass migration of Indian actors & studios to Facebook and YouTube.</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="year">2015</div>
+                        <div class="milestone">Collaborated with Taylor Gerring, Ethereum Co-Founder, on blockchain advisory initiatives.</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="year">2025</div>
+                        <div class="milestone">Launch of Fankoin – the fractionalized NFT & creator economy platform for the entertainment industry.</div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Industry Connections</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$100M+</div>
+                        <div class="stat-label">Value Created</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 - The Vision -->
+        <div class="slide slide3">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>🎯</span>
+                    <span>Slide 3 - The Vision</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    <span class="gradient-text">Fankoin's Mission</span>
+                </h1>
+
+                <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+                    <p style="font-size: 1.8rem; line-height: 1.6; color: #86efac;">
+                        To revolutionize entertainment by allowing fans to own a piece of the stories they love through fractionalized NFTs and creator-issued assets.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-title">💎 Fan Tokens</div>
+                        <div class="feature-desc">Digital assets linked to creators, movies, and studios, allowing fans to own a piece of their favorite entertainment.</div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-title">🔄 FAN-FRAC Model</div>
+                        <div class="feature-desc">NFTs that can be fractionalized for broader ownership, making high-value entertainment assets accessible to all fans.</div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-title">🎨 Creator Assets</div>
+                        <div class="feature-desc">Digital collectibles, passes, and perks minted directly by creators for their most dedicated fans.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 - Problem & Opportunity -->
+        <div class="slide slide4">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>⚖️</span>
+                    <span>Slide 4 - Problem & Opportunity</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    Problem &
+                    <span style="background: linear-gradient(135deg, #ef4444, #22c55e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Opportunity</span>
+                </h1>
+
+                <div class="problem-opportunity">
+                    <div class="problem-section">
+                        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="font-size: 3rem; margin-right: 1rem;">⚠️</div>
+                            <h2 style="font-size: 2rem; font-weight: 700; color: #fca5a5;">The Problem</h2>
+                        </div>
+                        <p style="font-size: 1.3rem; line-height: 1.6; color: #fecaca;">
+                            Fans are passionate, but current platforms limit them to being passive consumers.
+                        </p>
+                    </div>
+
+                    <div class="opportunity-section">
+                        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="font-size: 3rem; margin-right: 1rem;">🚀</div>
+                            <h2 style="font-size: 2rem; font-weight: 700; color: #86efac;">The Opportunity</h2>
+                        </div>
+                        <p style="font-size: 1.3rem; line-height: 1.6; color: #bbf7d0;">
+                            Fankoin unlocks active fan participation, ownership, and financial upside, turning global fanbases into engaged micro-investors.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(90deg, #ef4444, #22c55e); border-radius: 20px; padding: 2rem;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+                        <div style="font-size: 4rem;">😴</div>
+                        <div style="font-size: 3rem;">→</div>
+                        <div style="font-size: 4rem;">🚀</div>
+                    </div>
+                    <p style="font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        Passive Fans → Active Micro-Investors
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 - Founder NFT Pre-Sale -->
+        <div class="slide slide5">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>👑</span>
+                    <span>Slide 5 - Founder NFT Pre-Sale</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    Raising <span style="color: #fbbf24;">$5M</span> via
+                    <br>5,000 Founder NFTs @ $1,000 each
+                </h1>
+
+                <div class="calculation-box">
+                    <div class="calc-item">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">💰</div>
+                        <div class="calc-number">$5M</div>
+                        <div class="calc-label">Target Raise</div>
+                    </div>
+                    <div style="font-size: 4rem; color: white;">÷</div>
+                    <div class="calc-item">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">💎</div>
+                        <div class="calc-number">5,000</div>
+                        <div class="calc-label">Founder NFTs</div>
+                    </div>
+                    <div style="font-size: 4rem; color: white;">=</div>
+                    <div class="calc-item">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">⚡</div>
+                        <div class="calc-number">$1,000</div>
+                        <div class="calc-label">Each NFT</div>
+                    </div>
+                </div>
+
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">
+                    Perks of Founder NFTs:
+                </h2>
+
+                <div class="perk-grid">
+                    <div class="perk-card">
+                        <div class="perk-title">🛡️ Lifetime Zero Fees</div>
+                        <div class="perk-desc">No transaction or listing fees, ever.</div>
+                    </div>
+
+                    <div class="perk-card">
+                        <div class="perk-title">👑 Premium Governance Access</div>
+                        <div class="perk-desc">Exclusive voting & input on platform direction.</div>
+                    </div>
+
+                    <div class="perk-card">
+                        <div class="perk-title">🚀 Early Creator Access</div>
+                        <div class="perk-desc">Priority entry to first 50 creator launches.</div>
+                    </div>
+
+                    <div class="perk-card">
+                        <div class="perk-title">⭐ VIP Perks</div>
+                        <div class="perk-desc">Special event invites & direct creator calls.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6 - Tokenomics & Revenue -->
+        <div class="slide slide6">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>💎</span>
+                    <span>Slide 6 - Tokenomics & Revenue</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    <span style="background: linear-gradient(135deg, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Tokenomics & Revenue</span>
+                </h1>
+
+                <div style="background: linear-gradient(135deg, #a855f7, #ec4899); border-radius: 20px; padding: 2rem; margin: 2rem 0;">
+                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <div style="font-size: 4rem; margin-right: 1rem;">💎</div>
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 900;">Fankoin Token (FKN)</div>
+                            <div style="font-size: 1.3rem; opacity: 0.9;">Fuels platform transactions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem; color: #a855f7;">
+                    Multiple Revenue Streams:
+                </h2>
+
+                <div class="revenue-grid">
+                    <div class="revenue-card">
+                        <div class="revenue-title">🏪 Fractionalized NFT Marketplace</div>
+                        <div class="revenue-desc">Transaction fees from marketplace activities and trading.</div>
+                    </div>
+
+                    <div class="revenue-card">
+                        <div class="revenue-title">🎨 Creator Asset Sales</div>
+                        <div class="revenue-desc">Sales and resale royalties from creator-issued digital assets.</div>
+                    </div>
+
+                    <div class="revenue-card">
+                        <div class="revenue-title">👑 Premium Fan Memberships</div>
+                        <div class="revenue-desc">Recurring membership tiers with exclusive benefits and access.</div>
+                    </div>
+
+                    <div class="revenue-card">
+                        <div class="revenue-title">📺 Advertising & Sponsorship</div>
+                        <div class="revenue-desc">Entertainment brand partnerships and targeted advertising revenue.</div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #a855f7;">$50M+</div>
+                        <div class="stat-label">Projected Volume</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ec4899;">500K+</div>
+                        <div class="stat-label">Target Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #a855f7;">1,200+</div>
+                        <div class="stat-label">Creator Assets</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ec4899;">5+</div>
+                        <div class="stat-label">Revenue Streams</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7 - Timeline of Innovation -->
+        <div class="slide slide7">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>📅</span>
+                    <span>Slide 7 - Timeline of Innovation</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    <span style="color: #7dd3fc;">Timeline of Innovation</span>
+                </h1>
+
+                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 3rem; color: #7dd3fc;">
+                    2005 → 2008 → 2015 → 2025
+                </div>
+
+                <div class="timeline-flow">
+                    <div class="timeline-year">
+                        <div class="year-number">2005</div>
+                        <div class="year-event">BusinessOfCinema.com launch</div>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="timeline-year">
+                        <div class="year-number">2008</div>
+                        <div class="year-event">First Facebook Live stream in Indian cinema</div>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="timeline-year">
+                        <div class="year-number">2015</div>
+                        <div class="year-event">Ethereum collaboration with Taylor Gerring</div>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="timeline-year">
+                        <div class="year-number">2025</div>
+                        <div class="year-event">Fankoin launch – bringing blockchain to global entertainment fans</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; margin-top: 3rem;">
+                    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #7dd3fc;">
+                        Two Decades of Digital Entertainment Innovation
+                    </h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Years of Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Industry Connections</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">$100M+</div>
+                            <div class="stat-label">Value Created</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">Global</div>
+                            <div class="stat-label">Entertainment Reach</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8 - The Ask -->
+        <div class="slide slide8">
+            <div class="slide-content">
+                <div class="slide-badge">
+                    <span>🤝</span>
+                    <span>Slide 8 - The Ask</span>
+                </div>
+                
+                <h1 class="slide-title">
+                    We Are Seeking
+                    <br><span style="color: #fbbf24;">Strategic Partners</span>
+                </h1>
+
+                <div class="ask-grid">
+                    <div class="ask-item">
+                        <div class="ask-title">💰 $5M via Founder NFT Pre-Sale</div>
+                        <div class="ask-desc">5,000 exclusive Founder NFTs at $1,000 each, providing lifetime benefits and governance rights to early supporters.</div>
+                    </div>
+
+                    <div class="ask-item">
+                        <div class="ask-title">🎯 Strategic Investors</div>
+                        <div class="ask-desc">Seeking investors with deep entertainment industry expertise and blockchain technology experience to guide our growth.</div>
+                    </div>
+
+                    <div class="ask-item">
+                        <div class="ask-title">🤝 Industry Partnerships</div>
+                        <div class="ask-desc">Partnerships with studios, OTT platforms, and talent agencies to accelerate adoption and content creation.</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; margin: 3rem 0;">
+                    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">
+                        🚀 Join the Founding Team
+                    </h2>
+                    <p style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 2rem;">
+                        Be part of the next entertainment revolution. Early partners get exclusive access, 
+                        governance rights, and the opportunity to shape the future of fan engagement.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">$5M</div>
+                            <div class="stat-label">Founder NFT Raise</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">Strategic</div>
+                            <div class="stat-label">Investors Needed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">Studios</div>
+                            <div class="stat-label">Partnership Target</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button class="control-btn" onclick="previousSlide()">← Previous</button>
+        <button class="control-btn" onclick="toggleAutoplay()" id="playBtn">⏸️ Pause</button>
+        <button class="control-btn" onclick="nextSlide()">Next →</button>
+        <button class="control-btn" onclick="window.location.href='index.html'">🏠 Home</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">
+        <span id="currentSlide">1</span> / <span id="totalSlides">8</span>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        let isAutoplay = true;
+        let autoplayInterval;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const slideDuration = 8000; // 8 seconds per slide
+
+        // Initialize
+        document.getElementById('totalSlides').textContent = totalSlides;
+        startAutoplay();
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show current slide
+            slides[index].classList.add('active');
+
+            // Update counter
+            document.getElementById('currentSlide').textContent = index + 1;
+
+            // Update progress bar
+            const progress = ((index + 1) / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function previousSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        function startAutoplay() {
+            if (autoplayInterval) clearInterval(autoplayInterval);
+            autoplayInterval = setInterval(nextSlide, slideDuration);
+        }
+
+        function stopAutoplay() {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                autoplayInterval = null;
+            }
+        }
+
+        function toggleAutoplay() {
+            const playBtn = document.getElementById('playBtn');
+            if (isAutoplay) {
+                stopAutoplay();
+                playBtn.textContent = '▶️ Play';
+                isAutoplay = false;
+            } else {
+                startAutoplay();
+                playBtn.textContent = '⏸️ Pause';
+                isAutoplay = true;
+            }
+        }
+
+        // Keyboard controls
+        document.addEventListener('keydown', function(e) {
+            switch(e.key) {
+                case 'ArrowLeft':
+                    previousSlide();
+                    break;
+                case 'ArrowRight':
+                case ' ':
+                    nextSlide();
+                    break;
+                case 'Escape':
+                    window.location.href = 'index.html';
+                    break;
+            }
+        });
+
+        // Pause on hover
+        document.querySelector('.slideshow-container').addEventListener('mouseenter', function() {
+            if (isAutoplay) stopAutoplay();
+        });
+
+        document.querySelector('.slideshow-container').addEventListener('mouseleave', function() {
+            if (isAutoplay) startAutoplay();
+        });
+    </script>
+</body>
+</html>
