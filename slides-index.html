@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fankoin Presentation Slides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .slides-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+        .slides-content {
+            max-width: 1200px;
+            text-align: center;
+            color: white;
+        }
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .slide-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .slide-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(236, 72, 153, 0.3);
+        }
+        .slide-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ec4899, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .slide-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .slide-desc {
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        .nav-buttons {
+            margin-top: 3rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .nav-btn {
+            background: linear-gradient(135deg, #ec4899, #a855f7);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="slides-container">
+        <div class="slides-content">
+            <div class="hero-badge" style="margin-bottom: 2rem;">
+                <div class="badge-icon">📊</div>
+                <span>Fankoin Presentation</span>
+            </div>
+            
+            <h1 style="font-size: 4rem; font-weight: 900; margin-bottom: 2rem; background: linear-gradient(135deg, #ec4899, #a855f7, #3b82f6); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                Fankoin Presentation Slides
+            </h1>
+            
+            <p style="font-size: 1.5rem; color: #cbd5e1; margin-bottom: 3rem;">
+                Navigate through our complete presentation deck
+            </p>
+
+            <div class="slides-grid">
+                <a href="slide1-cover.html" class="slide-card">
+                    <div class="slide-number">01</div>
+                    <div class="slide-title">Cover</div>
+                    <div class="slide-desc">Fankoin – Where Fans Own the Story</div>
+                </a>
+
+                <a href="slide2-founder.html" class="slide-card">
+                    <div class="slide-number">02</div>
+                    <div class="slide-title">Founder Spotlight</div>
+                    <div class="slide-desc">Proven Digital Entertainment & Blockchain Leadership</div>
+                </a>
+
+                <a href="slide3-vision.html" class="slide-card">
+                    <div class="slide-number">03</div>
+                    <div class="slide-title">The Vision</div>
+                    <div class="slide-desc">Fankoin's Mission & Core Features</div>
+                </a>
+
+                <a href="slide4-problem.html" class="slide-card">
+                    <div class="slide-number">04</div>
+                    <div class="slide-title">Problem & Opportunity</div>
+                    <div class="slide-desc">From Passive Fans to Active Micro-Investors</div>
+                </a>
+
+                <a href="slide5-nft.html" class="slide-card">
+                    <div class="slide-number">05</div>
+                    <div class="slide-title">Founder NFT Pre-Sale</div>
+                    <div class="slide-desc">Raising $5M via 5,000 Founder NFTs</div>
+                </a>
+
+                <a href="slide6-tokenomics.html" class="slide-card">
+                    <div class="slide-number">06</div>
+                    <div class="slide-title">Tokenomics & Revenue</div>
+                    <div class="slide-desc">Multiple Revenue Streams & Token Utility</div>
+                </a>
+
+                <a href="slide7-timeline.html" class="slide-card">
+                    <div class="slide-number">07</div>
+                    <div class="slide-title">Timeline of Innovation</div>
+                    <div class="slide-desc">2005 → 2008 → 2015 → 2025</div>
+                </a>
+
+                <a href="slide8-ask.html" class="slide-card">
+                    <div class="slide-number">08</div>
+                    <div class="slide-title">The Ask</div>
+                    <div class="slide-desc">Strategic Partners & Investment</div>
+                </a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn">← Back to Main Site</a>
+                <a href="slide1-cover.html" class="nav-btn">Start Presentation →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

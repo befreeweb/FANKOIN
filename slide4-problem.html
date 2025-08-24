@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 4 - Problem & Opportunity | Fankoin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .slide-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 50%, #16a34a 100%);
+        }
+        .slide-content {
+            max-width: 1200px;
+            text-align: center;
+            color: white;
+        }
+        .slide-nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .problem-section, .opportunity-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .problem-section {
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
+        .opportunity-section {
+            border: 2px solid rgba(34, 197, 94, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-nav">
+        <a href="slide3-vision.html" class="nav-btn">← Prev</a>
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="slide5-nft.html" class="nav-btn">Next →</a>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="hero-badge" style="margin-bottom: 2rem;">
+                <div class="badge-icon">⚖️</div>
+                <span>Slide 4 - Problem & Opportunity</span>
+            </div>
+            
+            <h1 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 3rem;">
+                Problem &
+                <span style="background: linear-gradient(135deg, #ef4444, #22c55e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Opportunity</span>
+            </h1>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                <div class="problem-section">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-right: 1rem;">⚠️</div>
+                        <h2 style="font-size: 2rem; font-weight: 700; color: #fca5a5;">The Problem</h2>
+                    </div>
+                    <p style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 1.5rem; color: #fecaca;">
+                        Fans are passionate, but current platforms limit them to being passive consumers.
+                    </p>
+                    <ul style="text-align: left; font-size: 1.1rem; line-height: 1.8; color: #fed7d7;">
+                        <li>• No ownership in favorite content</li>
+                        <li>• Limited engagement opportunities</li>
+                        <li>• No financial upside from support</li>
+                        <li>• Fragmented fan experiences</li>
+                    </ul>
+                </div>
+
+                <div class="opportunity-section">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-right: 1rem;">🚀</div>
+                        <h2 style="font-size: 2rem; font-weight: 700; color: #86efac;">The Opportunity</h2>
+                    </div>
+                    <p style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 1.5rem; color: #bbf7d0;">
+                        Fankoin unlocks active fan participation, ownership, and financial upside, turning global fanbases into engaged micro-investors.
+                    </p>
+                    <ul style="text-align: left; font-size: 1.1rem; line-height: 1.8; color: #d1fae5;">
+                        <li>• Own fractions of entertainment assets</li>
+                        <li>• Participate in creative decisions</li>
+                        <li>• Earn from entertainment success</li>
+                        <li>• Build engaged communities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(90deg, #ef4444, #22c55e); border-radius: 20px; padding: 2rem;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+                    <div style="font-size: 4rem;">😴</div>
+                    <div style="font-size: 3rem;">→</div>
+                    <div style="font-size: 4rem;">🚀</div>
+                </div>
+                <p style="font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;">
+                    Passive Fans → Active Micro-Investors
+                </p>
+                <p style="font-size: 1.2rem; opacity: 0.9;">
+                    Transforming passionate fanbases into engaged stakeholders with real ownership
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

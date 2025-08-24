@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1 - Cover | Fankoin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .slide-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+        .slide-content {
+            max-width: 1000px;
+            text-align: center;
+            color: white;
+        }
+        .slide-nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .nav-btn {
+            background: rgba(236, 72, 153, 0.2);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            color: #ec4899;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover {
+            background: rgba(236, 72, 153, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-nav">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="slide2-founder.html" class="nav-btn">Next →</a>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="hero-badge" style="margin-bottom: 2rem;">
+                <div class="badge-icon">⚡</div>
+                <span>Slide 1 - Cover</span>
+            </div>
+            
+            <h1 style="font-size: 4rem; font-weight: 900; margin-bottom: 2rem; background: linear-gradient(135deg, #ec4899, #a855f7, #3b82f6); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                Fankoin – Where Fans Own the Story
+            </h1>
+            
+            <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; margin-bottom: 2rem;">
+                <p style="font-size: 1.5rem; line-height: 1.6; margin-bottom: 1rem;">
+                    Pioneered by the team behind <strong>BusinessOfCinema.com</strong> (est. 2005) and the first Facebook livestream of Indian cinema (2008).
+                </p>
+                <p style="font-size: 1.3rem; color: #a855f7; line-height: 1.6;">
+                    Built with blockchain visionaries, including collaboration with <strong>Taylor Gerring, Co-Founder of Ethereum</strong>.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 1.5rem;">
+                    <div style="font-size: 2.5rem; font-weight: 900; color: #ec4899; margin-bottom: 0.5rem;">2005</div>
+                    <div style="color: #cbd5e1;">BusinessOfCinema.com</div>
+                    <div style="color: #ec4899; font-size: 0.9rem; margin-top: 0.5rem;">Industry Pioneer</div>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 1.5rem;">
+                    <div style="font-size: 2.5rem; font-weight: 900; color: #a855f7; margin-bottom: 0.5rem;">2008</div>
+                    <div style="color: #cbd5e1;">Facebook Live Pioneer</div>
+                    <div style="color: #a855f7; font-size: 0.9rem; margin-top: 0.5rem;">Indian Cinema</div>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 1.5rem;">
+                    <div style="font-size: 2.5rem; font-weight: 900; color: #3b82f6; margin-bottom: 0.5rem;">2015</div>
+                    <div style="color: #cbd5e1;">Ethereum Collaboration</div>
+                    <div style="color: #3b82f6; font-size: 0.9rem; margin-top: 0.5rem;">Taylor Gerring</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

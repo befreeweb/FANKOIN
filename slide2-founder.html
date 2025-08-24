@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 2 - Founder Spotlight | Fankoin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .slide-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #581c87 0%, #7c3aed 50%, #a855f7 100%);
+        }
+        .slide-content {
+            max-width: 1200px;
+            text-align: center;
+            color: white;
+        }
+        .slide-nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .year {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 0.5rem;
+        }
+        .milestone {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-nav">
+        <a href="slide1-cover.html" class="nav-btn">← Prev</a>
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="slide3-vision.html" class="nav-btn">Next →</a>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="hero-badge" style="margin-bottom: 2rem;">
+                <div class="badge-icon">🏆</div>
+                <span>Slide 2 - Founder Spotlight</span>
+            </div>
+            
+            <h1 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 3rem;">
+                Proven Digital Entertainment &
+                <br><span style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Blockchain Leadership</span>
+            </h1>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="timeline-item">
+                    <div class="year">2005</div>
+                    <div class="milestone">Launched BusinessOfCinema.com – the first Indian entertainment industry portal.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2008</div>
+                    <div class="milestone">Produced the world's first Facebook Live stream for Indian cinema.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2008–2012</div>
+                    <div class="milestone">Led the mass migration of Indian actors & studios to Facebook and YouTube.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2015</div>
+                    <div class="milestone">Collaborated with Taylor Gerring, Ethereum Co-Founder, on blockchain advisory initiatives.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2025</div>
+                    <div class="milestone">Launch of Fankoin – the fractionalized NFT & creator economy platform for the entertainment industry.</div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 1.5rem;">
+                    <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem;">20+</div>
+                    <div>Years Experience</div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 1.5rem;">
+                    <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem;">1000+</div>
+                    <div>Industry Connections</div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 1.5rem;">
+                    <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem;">$100M+</div>
+                    <div>Value Created</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
