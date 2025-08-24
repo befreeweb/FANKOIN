@@ -1098,6 +1098,8 @@ body {
 /* Slide 8 - The Ask */
 .ask-items {
     display: flex;
+}
+
 /* Problem Section */
 .problem-section {
     padding: 120px 0;
